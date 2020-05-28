@@ -1,0 +1,5 @@
+:deep .mat-toolbar { margin-bottom: 16px; }
+.header-navigation {
+    padding-left: max(16px, env(safe-area-inset-left));
+    padding-right: max(16px, env(safe-area-inset-right));
+}

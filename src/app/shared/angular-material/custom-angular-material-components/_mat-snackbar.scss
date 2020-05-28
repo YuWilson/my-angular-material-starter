@@ -1,0 +1,44 @@
+$status-bar-styles: (
+    success: (bg: #0bcc8c, txt: #fff),
+    error: (bg: #ec0b61, txt: #fff),
+    info: (bg: #1b93ca, txt: #fff),
+    warning: (bg: #ffd000, txt: #000),
+);
+.status-bar {
+    padding: 0;
+    height: auto;
+    
+    app-status-bar {
+        border-top-left-radius: inherit;
+        border-bottom-left-radius: inherit;
+        display: flex;
+        height: 100%;
+    }
+    .status-bar-icon {
+        display: inline-flex;
+        border-top-left-radius: inherit;
+        border-bottom-left-radius: inherit;
+        width: 48px;
+        min-width: 48px;
+        justify-content: center;
+        mat-icon { width: 32px; height: 32px; font-size: 24px; text-align: center; line-height: 32px; align-self: center; }
+    }
+
+    .status-bar-content {
+        flex: 1 1 auto;
+        padding: 16px 16px;
+        line-height: 1.4em;
+        word-break: break-all;
+        white-space: pre-line;
+    }
+
+    @each $type, $value in $status-bar-styles {
+        $bg:  map-get($value, bg);
+        $txt: map-get($value, txt);
+        &.#{$type} {
+            .status-bar-icon {
+                background-color: $bg; color: $txt;
+            }
+        }
+    }
+}

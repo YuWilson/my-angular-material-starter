@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/app/shared/angular-material/angular-material-theme.scss",
               "src/styles.scss"
             ],
             "scripts": []
@@ -123,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ng9"
+    }
+  },
+  "defaultProject": "ng9",
+  "cli": {
+    "analytics": "ba058e27-d012-4d03-aa31-bf3a4f92bb2e"
+  }
 }

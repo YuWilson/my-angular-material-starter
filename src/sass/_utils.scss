@@ -1,0 +1,31 @@
+$unit_size: 8px;
+$sizes:(0,1,2,3,4,5,6);
+
+@each $name in $sizes {
+    .p-#{$name}   { padding: $name * $unit_size !important; }
+    .pl-#{$name}  { padding-left: $name * $unit_size !important; }
+    .pr-#{$name}  { padding-right: $name * $unit_size !important; }
+    .pt-#{$name}  { padding-top: $name * $unit_size !important; }
+    .pb-#{$name}  { padding-bottom: $name * $unit_size !important; }
+    .plr-#{$name} { padding-left: $name * $unit_size !important; padding-right: $name * $unit_size !important; }
+    .ptb-#{$name} { padding-top: $name * $unit_size !important; padding-bottom: $name * $unit_size !important; }
+
+    .m-#{$name}   { margin: $name * $unit_size !important; }
+    .ml-#{$name}  { margin-left: $name * $unit_size !important; }
+    .mr-#{$name}  { margin-right: $name * $unit_size !important; }
+    .mt-#{$name}  { margin-top: $name * $unit_size !important; }
+    .mb-#{$name}  { margin-bottom: $name * $unit_size !important; }
+    .mlr-#{$name} { margin-left: $name * $unit_size !important; margin-right: $name * $unit_size !important; }
+    .mtb-#{$name} { margin-top: $name * $unit_size !important; margin-bottom: $name * $unit_size !important; }
+}
+
+$widths:(25, 50, 75, 100);
+
+@each $width in $widths { .w-#{$width} { width: $width * 1% !important; } }
+
+.valign-middle { vertical-align: middle; }
+.valign-top { vertical-align: top; }
+.valign-bottom { vertical-align: bottom; }
+.align-self-start { align-self: flex-start; }
+.align-self-end { align-self: flex-end; }
+.align-self-center { align-self: center; }
